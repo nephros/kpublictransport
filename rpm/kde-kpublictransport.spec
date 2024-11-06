@@ -2,6 +2,10 @@
 %global kde_version 24.08.2
 %global kf_version 6.6.0
 
+# Try to work around OBS bug:
+# /dev/shm is a tmpfs...
+%global _builddir /dev/shm/BUILD
+
 Name:           kde-kpublictransport
 Version:        24.08.2
 Release:        0%{?dist}
@@ -48,6 +52,7 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 
 %prep
 %autosetup -n %{name}-%{version}/upstream -p1
+mkdir -p %{_builddir}
 
 %build
 %cmake_kf6
