@@ -52,10 +52,8 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %build
 # Try to work around OBS bug:
 %cmake_kf6 \
-%ifarch aarch64
-    CONFIG-="qtquickcompiler" \
-%else
-    CONFIG+="qtquickcompiler" \
+%ifnarch %ix86
+    -DNO_CACHEGEN=ON \
 %endif
     %nil
 %cmake_build
