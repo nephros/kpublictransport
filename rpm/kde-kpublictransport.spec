@@ -49,7 +49,14 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %autosetup -n %{name}-%{version}/upstream -p1
 
 %build
-%cmake_kf6
+# Try to work around OBS bug:
+%cmake_kf6 \
+%ifarch aarch64
+    CONFIG-="qtquickcompiler" \
+%else
+    CONFIG+="qtquickcompiler" \
+%endif
+    %nil
 %cmake_build
 
 %install
