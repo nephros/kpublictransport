@@ -17,6 +17,7 @@ BuildRequires: kf6-rpm-macros
 BuildRequires: kf6-extra-cmake-modules >= %{kf_version}
 
 BuildRequires: qt6-qtbase-devel
+BuildRequires: qt6-qtbase-private-devel
 BuildRequires: qt6-qtdeclarative-devel
 BuildRequires: qt6-qttools-devel
 BuildRequires: qt6-qttools
