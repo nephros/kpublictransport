@@ -5,7 +5,6 @@
 # Try to work around OBS bug:
 # /dev/shm is a tmpfs...
 %global _builddir /dev/shm/BUILD
-%global __cmake_builddir /dev/shm/BUILD/%{_vpath_builddir}
 
 Name:           kde-kpublictransport
 Version:        24.08.2
