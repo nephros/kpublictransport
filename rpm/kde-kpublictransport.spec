@@ -7,7 +7,8 @@ Name:           kde-kpublictransport
 # Bump this when that is available.
 #Version:        25.08.2
 #Version:        25.04.3
-Version:        25.12.3
+#Version:        25.12.3
+Version:        26.03.90
 Release:        0%{?dist}
 Summary:        Library to assist with accessing public transport timetables and other data
 License:        BSD and CC0-1.0 and LGPLv2+ and MIT and ODbL-1.0
